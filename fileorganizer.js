@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * 4 cmds: help, tree, organize
+ * ZENIFY - A FILE ORGANIZER BASED CMD LINE UTILITY
+ * 3 cmds: help, tree, organize
  * 
 */
 import fs from "fs";
@@ -49,8 +50,6 @@ function tree(currentDir, pad) {
 
 
 function organize() {
-    // console.log('this is organize cmd');
-
     // 1.read cwd ✅
     const cwd = process.cwd();
     const items = fs.readdirSync(cwd);
