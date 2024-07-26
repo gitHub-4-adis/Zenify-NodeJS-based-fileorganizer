@@ -1,0 +1,16 @@
+{
+  "name": "fileorganizer",
+  "version": "1.0.0",
+  "main": "fileorganizer.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "filezen": "./fileorganizer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
