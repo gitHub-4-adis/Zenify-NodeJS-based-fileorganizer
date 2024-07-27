@@ -78,11 +78,19 @@ function organize() {
                         if(putFileInsideParentFolder(
                             filetypes, mapFileToType, 
                             key, curExt, cwd, fullpath, parsed) === true) {
+                                console.log(mapFileToType);
                             break;
                         };
                     }
                 }
-                fs.unlinkSync(fullpath);
+                // remove the file from src iff it is successfully copied to destination folder
+                if(mapFileToType.hasOwnProperty(curExt) && 
+                    fs.existsSync(path.join(cwd, mapFileToType[curExt], parsed.base)) === true) {
+                    fs.unlinkSync(fullpath);
+
+                } else {
+                    console.log('could not copy: ', parsed.base);
+                }
             } 
 
         } else {
